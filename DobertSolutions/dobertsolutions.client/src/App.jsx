@@ -8,7 +8,7 @@ import Contact from './pages/Contact/Contact';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-
+// random comment to force change
 library.add(fab, fas);
 
 function App() {
