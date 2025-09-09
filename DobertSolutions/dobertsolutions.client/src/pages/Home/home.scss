@@ -1,0 +1,135 @@
+@use '../../styles/variables' as vars;
+
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    gap: 1rem;
+    padding: 2rem 0;
+    font-family: vars.$font-primary;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.left-panel {
+    flex: 1;
+    padding: 1rem;
+    background-color: vars.$secondary-color;
+    color: vars.$text-color;
+    border-radius: 1rem;
+    box-shadow: vars.$box-shadow-default;
+    font-family: vars.$font-primary;
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: vars.$secondary-color;
+    border-radius: 1rem;
+    box-shadow: vars.$box-shadow-default;
+
+    .profile-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        .profile-img {
+            max-width: 400px;
+            border-radius: 50%;
+            border: 3px solid vars.$accent-color;
+            object-fit: cover;
+        }
+
+        .contact-info {
+            text-align: left;
+            font-size: 1rem;
+            color: vars.$text-color;
+
+            a {
+                color: #6E92A1;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                margin: 0.25rem 0;
+            }
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            color: vars.$text-color;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            svg {
+                margin-right: 0.5rem;
+                color: vars.$accent-color;
+                transition: color 0.3s ease;
+            }
+
+            &:hover {
+                color: #666CF6;
+
+                svg {
+                    color: vars.$primary-color;
+                }
+
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.gradyQuote {
+    padding-top: 0rem;
+
+
+}
+
+
+.what-i-do-container {
+    padding-left: 1rem;
+
+    .what-i-do-item {
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        background-color: vars.$primary-color;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+        .title {
+            font-weight: 600;
+        }
+
+        .description {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+
+            .description {
+                max-height: 200px;
+                opacity: 1;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
